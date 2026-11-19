@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "node scripts/serve.mjs",
+    "deploy:firebase": "SITE_URL=https://education-news-site.web.app npm run check && npx --yes firebase-tools@15.9.0 deploy --only hosting --project education-news-site",
     "start": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "test": "node --test",

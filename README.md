@@ -49,7 +49,11 @@ SITE_URL=https://your-real-domain.example npm run build
 
 실제 도메인을 `SITE_URL`로 전달하면 canonical/og:url이 추가됩니다. 임의의 서비스 주소를 미리 선언하지 않습니다. `dist/`를 정적 호스팅에 배포할 수 있으며 하위 경로에서도 동작하도록 상대 경로와 해시 라우팅을 사용합니다. 해시별 콘텐츠의 검색 최적화는 추후 개별 서버/정적 URL로 확장할 항목입니다.
 
-## GitHub Pages
+## Firebase Hosting (지정된 배포 대상)
+
+`education-news-site` 프로젝트의 동일한 Hosting 사이트로 배포하도록 구성되어 있습니다. [Firebase 연결·배포 안내](docs/firebase.md)를 참고하세요. 인증 시크릿 등록 후 main 변경을 자동 배포하는 워크플로가 포함됩니다. 배포 설정만으로 실제 배포 성공을 의미하지 않습니다.
+
+## GitHub Pages (대체 배포 경로)
 
 자동으로 공개 배포하지 않습니다. 검토 후 저장소 **Settings → Pages → Source: GitHub Actions**를 설정하고 **Actions → Publish Goodsay to GitHub Pages → Run workflow**를 실행하면 됩니다. CI는 `main` 변경과 PR에서 검사한 정적 결과를 artifact로도 남깁니다.
 
